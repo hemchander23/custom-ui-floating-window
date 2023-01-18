@@ -6,7 +6,8 @@
     "dev": "next dev | pino-pretty",
     "build": "next build",
     "start": "next start | pino-pretty",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "npx prisma db push"
   },
   "dependencies": {
     "@pipedrive/app-extensions-sdk": "^0.6.0",
