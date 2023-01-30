@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "next dev | pino-pretty",
     "build": "next build",
-    "start": "next start | pino-pretty",
+    "start": "next dev | pino-pretty",
     "lint": "next lint",
-    "postinstall": "npx prisma db push"
+    "postinstall": "npx prisma db push --force-reset"
   },
   "dependencies": {
     "@pipedrive/app-extensions-sdk": "^0.6.0",
@@ -28,5 +28,8 @@
     "eslint": "^8.29.0",
     "eslint-plugin-prefer-arrow-functions": "^3.1.4",
     "eslint-plugin-react": "^7.31.11"
+  },
+    "engines" : { 
+    "node" : "16.x"
   }
 }
