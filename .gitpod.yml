@@ -5,6 +5,6 @@ tasks:
 ports:
   - name: FloatingWindowURL
     port: 3000
-    onOpen: notify
+    onOpen: open-browser
 
 

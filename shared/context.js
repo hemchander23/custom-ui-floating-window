@@ -22,7 +22,6 @@ export const AppContextWrapper = ({ children }) => {
     setMissedCall,
   };
 
-  log.info('Context created');
   return (
     <AppContext.Provider value={sharedState}>{children}</AppContext.Provider>
   );
