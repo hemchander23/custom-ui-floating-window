@@ -1,3 +1,4 @@
+import { showFloatingWindow } from './custom_ui_sdk';
 import logger from './logger';
 const log = logger('socket');
 
@@ -13,9 +14,10 @@ export const handleSocketCommunication = (socket, props, sdk) => {
 
     socket.on('INBOUND_CALL', (...args) => {
       log.info('Receiving incoming call...');
-
-      if (props.callerState === 'listening')
+      if (props.callerState === 'listening'){
+        showFloatingWindow(sdk);
         startIncomingCall(props, args[0].number);
+      }
       else {
         log.info('Cannot place a call when a current call is in progress');
       }
