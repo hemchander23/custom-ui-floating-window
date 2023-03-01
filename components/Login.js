@@ -1,24 +1,10 @@
 // Login page if there is an issue with authorization
-const Login = () => {
+const Login = (props) => {
   return (
     <>
-      <a
-        className="p-2 m-2"
-        target="_blank"
-        rel="noreferrer"
-        href="http://localhost:3000/api/auth/login"
-      >
-        Please re-authorize
-      </a>
-      and then
-      <a
-        href="#"
-        onClick={() => {
-          window.location.reload();
-        }}
-      >
-        refresh the page
-      </a>
+      <div className="container m-4">
+        <code><h4>App is running. Check the terminal in GitPod to configure the app.</h4></code>
+      </div>
     </>
   );
 };
