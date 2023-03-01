@@ -1,0 +1,10 @@
+tasks:
+  - init: npm install && npm run dev
+    command: npm run start
+
+ports:
+  - name: FloatingWindowURL
+    port: 3000
+    onOpen: notify
+
+
