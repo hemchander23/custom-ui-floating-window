@@ -1,10 +1,10 @@
 tasks:
-  - init: npm install && npm run dev
-    command: npm run start
+  - init: npm install
+    command: bash init.sh
 
 ports:
   - name: FloatingWindowURL
     port: 3000
-    onOpen: open-browser
-
+    onOpen: notify
+    visibility: public
 
